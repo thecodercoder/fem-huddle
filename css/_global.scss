@@ -1,0 +1,70 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body, html  {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    line-height: 1.4;
+    font-family: $font-body;
+    font-size: 16px;
+}
+
+a, a:visited {
+    text-decoration: none;
+}
+
+header {
+    margin-bottom: 50px;
+
+    @media screen and (min-width: 1024px){
+        margin-bottom: 100px;
+    }
+
+    img {
+        width: 120px;
+
+        @media screen and (min-width: 1024px) {
+            width: 200px;
+        }
+
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+
+    @media screen and (min-width: 1024px){
+        justify-content: flex-end;
+    }
+
+    > a {        
+        margin-right: 16px;
+        transform: translateY(0px);
+        transition: transform 100ms ease-in-out;
+
+        &:last-child {
+            margin-right: 0px;
+        }
+
+        &:hover {
+            transform: translateY(-3px);
+        }
+    }
+
+    i.fab {
+        display: flex;
+        justify-content: center;
+        align-items: center;        
+        border: 1px solid #ffffff;
+        border-radius: 50%;
+        width: 48px;
+        height: 48px;
+        color: #ffffff;
+    }
+
+}
